@@ -1,5 +1,9 @@
 package interfaces;
 
-public interface AttaqueDeZone {
+import java.util.List;
 
+import beans.Personnage;
+
+public interface AttaqueDeZone {
+	public void attaque(List<Personnage> personnage);
 }
