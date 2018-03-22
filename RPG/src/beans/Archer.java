@@ -1,16 +1,19 @@
 package beans;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 import enums.Degats;
 
 public class Archer extends Personnage{
 	private static final int PV_TOTAL = 1200;
 	private static final int CHANCE_ESQUIVE = 25;
-	private Random rand = new Random();
 	
 	public Archer() {
 		super(PV_TOTAL);
+		capaciteAttaques = new ArrayList<Attaque>();
+		
+		cpaciteDefenses = new ArrayList<Defense>();
+		
 	}
 	
 	public void attaqueCible(Personnage personnage) {

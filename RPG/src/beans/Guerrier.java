@@ -1,5 +1,7 @@
 package beans;
 
+import java.util.ArrayList;
+
 import enums.Degats;
 
 public class Guerrier extends Personnage {
@@ -8,6 +10,9 @@ public class Guerrier extends Personnage {
 
 	public Guerrier() {
 		super(PV_TOTAL);
+		this.capaciteAttaques = new ArrayList<>();
+		capaciteAttaques.add(new AttaqueFort());
+		capaciteAttaques.add(new AttaqueFaible());
 	}
 	
 	public void subitDegat(Degats degat) {
@@ -15,11 +20,11 @@ public class Guerrier extends Personnage {
 	}
 	
 	public void attaqueCible(Personnage personnage) {
-		personnage.subitDegat(Degats.GROS);
+		capaciteAttaques.get(0).attaque(personnage);
 	}
 	
 	public void attaqueCibleDST(Personnage personnage) {
-		personnage.subitDegat(Degats.FAIBLE);
+		capaciteAttaques.get(1).attaque(personnage);
 		personnage.setSaigne(true);
 	}
 }

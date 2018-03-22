@@ -1,5 +1,7 @@
 package beans;
 
+import java.util.List;
+
 import enums.Degats;
 
 public abstract class Personnage {
@@ -9,6 +11,10 @@ public abstract class Personnage {
 	private boolean estVivant= true;
 	
 	private static final double SAIGNEMENT = 0.95;
+	
+	protected List<Attaque> capaciteAttaques;
+	protected List<Soin> capaciteSoins;
+	protected List<Defense> cpaciteDefenses;
 	
 	public Personnage() {}
 	
