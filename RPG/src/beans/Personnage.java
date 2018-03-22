@@ -35,7 +35,7 @@ public abstract class Personnage {
 	}
 	
 	public void attaqueZone(List<Personnage> personnages) {
-		capaciteAttaquesDeZone.attaque(personnages);
+		capaciteAttaquesDeZone.attaque(this, personnages);
 	}
 	
 	public void soigneCible(Personnage personnage) {

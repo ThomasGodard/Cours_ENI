@@ -21,7 +21,12 @@ public abstract class Attaque implements AttaqueCible, AttaqueDeZone{
 	}
 
 	@Override
-	public void attaque(List<Personnage> personnages) {
+	public void attaque(Personnage perso, List<Personnage> personnages) {
+		if (perso instanceof Monstre) {
+			for (Personnage personnage : personnages) {
+				
+			}
+		}
 		for (Personnage personnage : personnages) {
 			if (personnage instanceof Monstre) {
 				personnage.subitDegats(degats);
