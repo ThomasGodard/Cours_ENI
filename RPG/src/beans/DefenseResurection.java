@@ -1,6 +1,7 @@
 package beans;
 
 import enums.Degats;
+import interfaces.Defense;
 
 public class DefenseResurection implements Defense {
 

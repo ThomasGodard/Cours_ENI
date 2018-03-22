@@ -9,4 +9,6 @@ public class Monstre extends Personnage {
 		this.capaciteAttaquesCibles = new AttaqueFort();
 		this.capaciteDefenses = new DefenseResurection();
 	}
+	
+	
 }

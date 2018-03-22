@@ -31,10 +31,6 @@ public abstract class Attaque implements AttaqueCible, AttaqueDeZone{
 
 	@Override
 	public void attaque(Personnage personnage) {
-		this.attaquer(personnage);
-	}
-	
-	private void attaquer(Personnage personnage) {
 		personnage.subitDegats(degats);
 	}
 }

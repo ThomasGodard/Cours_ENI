@@ -5,6 +5,7 @@ import java.util.List;
 import enums.Degats;
 import interfaces.AttaqueCible;
 import interfaces.AttaqueDeZone;
+import interfaces.Defense;
 import interfaces.SoinCible;
 import interfaces.SoinDeZone;
 
@@ -35,6 +36,14 @@ public abstract class Personnage {
 	
 	public void attaqueZone(List<Personnage> personnages) {
 		capaciteAttaquesDeZone.attaque(personnages);
+	}
+	
+	public void soigneCible(Personnage personnage) {
+		capaciteSoinsCible.soin(personnage);
+	}
+	
+	public void soigneZone(List<Personnage> personnages) {
+		capaciteSoinsDeZone.soin(personnages);
 	}
 	
 	public void subitDegats(Degats degats) {

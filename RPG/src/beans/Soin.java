@@ -17,7 +17,7 @@ public abstract class Soin implements SoinDeZone, SoinCible {
 	}
 	
 	private void setSoins(Soins soins) {
-		this.setSoins(soins);
+		this.soins = soins ;
 	}
 	
 	@Override

@@ -3,6 +3,7 @@ package beans;
 import java.util.Random;
 
 import enums.Degats;
+import interfaces.Defense;
 
 public class DefenseEsquive implements Defense {
 	private static final int CHANCE_ESQUIVE = 25;

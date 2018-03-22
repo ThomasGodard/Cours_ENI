@@ -1,5 +1,6 @@
-package beans;
+package interfaces;
 
+import beans.Personnage;
 import enums.Degats;
 
 public interface Defense {

@@ -1,6 +1,7 @@
 package beans;
 
 import enums.Degats;
+import interfaces.Defense;
 
 public class DefenseBouclier implements Defense {
 	private static final double REDUCTION_DEGAT = 0.95;

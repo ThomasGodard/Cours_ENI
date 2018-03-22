@@ -146,10 +146,10 @@ public class RPG {
 						((Soigneur) personnage).attaqueCible(personnages.get(0));
 						break;
 					case 2 : 
-						((Soigneur) personnage).soinCible(personnage);
+						((Soigneur) personnage).soigneCible(personnage);
 						break;
 					case 3 :
-						((Soigneur) personnage).soinZone(personnages);
+						((Soigneur) personnage).soigneZone(personnages);
 						break;
 				}
 		}
