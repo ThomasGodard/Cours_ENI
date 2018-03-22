@@ -2,18 +2,18 @@ package beans;
 import java.util.List;
 
 import enums.Degats;
-import interfaces.Soigne;
+import interfaces.SoinDeZone;
 
 public class Soigneur extends Personnage {
 	private static final int PV_TOTAL = 900;
 	
-	private Soigne soinsDeZone;
-	private Soigne soinsCible;
+	private SoinDeZone soinsDeZone;
+	private SoinDeZone soinsCible;
 	
 	public Soigneur() {
 		super(PV_TOTAL);
-		this.soinsDeZone = new SoinDeZone();
-		this.soinsCible = new SoinCible();
+		this.soinsDeZone = new SoinF();
+		this.soinsCible = new SoinMoyen();
 	}
 	
 	public void attaqueCible(Personnage personnage) {

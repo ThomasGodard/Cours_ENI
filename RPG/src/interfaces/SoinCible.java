@@ -2,6 +2,6 @@ package interfaces;
 
 import beans.Personnage;
 
-public interface Soigne {
+public interface SoinCible {
 	public void soin(Personnage personnage);
 }
