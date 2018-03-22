@@ -1,19 +1,21 @@
 package beans;
+import java.util.ArrayList;
 import java.util.List;
 
 import enums.Degats;
+import interfaces.SoinCible;
 import interfaces.SoinDeZone;
 
 public class Soigneur extends Personnage {
 	private static final int PV_TOTAL = 900;
 	
-	private SoinDeZone soinsDeZone;
-	private SoinDeZone soinsCible;
+	private List<Soin> CapaciteSoins;
 	
 	public Soigneur() {
 		super(PV_TOTAL);
-		this.soinsDeZone = new SoinF();
-		this.soinsCible = new SoinMoyen();
+		this.CapaciteSoins = new ArrayList<Soin>();
+		CapaciteSoins.add(new SoinMoyen());
+		CapaciteSoins.add(new SoinFaible());
 	}
 	
 	public void attaqueCible(Personnage personnage) {
@@ -21,14 +23,11 @@ public class Soigneur extends Personnage {
 	}
 	
 	public void soinCible(Personnage personnage) {
-		this.soinsCible.soin(personnage);
+		
+		CapaciteSoins.get(0).soin(personnage);
 	}
 	
 	public void soinZone(List<Personnage> personnages) {
-		for(Personnage personnage : personnages) {
-			if(!(personnage instanceof Monstre)) {
-				this.soinsDeZone.soin(personnage);
-			}
-		}
+		CapaciteSoins.get(0).soin(personnages);
 	}
 }
