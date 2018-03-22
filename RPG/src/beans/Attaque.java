@@ -24,7 +24,7 @@ public abstract class Attaque implements AttaqueCible, AttaqueDeZone{
 	public void attaque(List<Personnage> personnages) {
 		for (Personnage personnage : personnages) {
 			if (personnage instanceof Monstre) {
-				personnage.subitDegat(degats);
+				personnage.subitDegats(degats);
 			}
 		}
 	}
@@ -35,6 +35,6 @@ public abstract class Attaque implements AttaqueCible, AttaqueDeZone{
 	}
 	
 	private void attaquer(Personnage personnage) {
-		personnage.subitDegat(degats);
+		personnage.subitDegats(degats);
 	}
 }

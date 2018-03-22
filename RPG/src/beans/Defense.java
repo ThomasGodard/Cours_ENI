@@ -1,5 +1,7 @@
 package beans;
 
-public interface Defense {
+import enums.Degats;
 
+public interface Defense {
+	public int subitDegat(int pv, Degats degats);
 }

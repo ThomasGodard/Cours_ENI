@@ -9,6 +9,8 @@ public class Monstre extends Personnage {
 	
 	public Monstre() {
 		super(PV_TOTAL);
+		this.capaciteAttaquesDeZone = new AttaqueMoyen();
+		this.capaciteAttaquesCibles = new AttaqueFort();
 	}
 
 	public void attaqueCible(Personnage personnage) {
@@ -28,7 +30,7 @@ public class Monstre extends Personnage {
 	@Override
 	public void subitDegat(Degats degat) {
 		super.subitDegat(degat);
-		if (!this.getEstVivant() && !this.cptMort) {
+		if (!this.estVivant() && !this.cptMort) {
 			this.setPv(PV_TOTAL);
 			cptMort = true;
 		}

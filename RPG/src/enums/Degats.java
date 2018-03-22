@@ -4,7 +4,8 @@ public enum Degats {
 	TRES_GROS(550),
 	GROS(300),
 	MOYEN(150),
-	FAIBLE(50);
+	FAIBLE(50),
+	ZERO(0);
 	
 	private int degats;
 	

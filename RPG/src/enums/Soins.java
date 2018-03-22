@@ -2,7 +2,8 @@ package enums;
 
 public enum Soins {
 	MOYEN(300),
-	FAIBLE(100);
+	FAIBLE(100),
+	ZERO(0);
 	
 	private int soin;
 	
