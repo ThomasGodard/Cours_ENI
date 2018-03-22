@@ -5,8 +5,8 @@ import enums.Degats;
 public class DefenseZero implements Defense {
 
 	@Override
-	public int subitDegat(int pv, Degats degats) {
-		return pv - degats.getDegats();
+	public void subitDegat(Personnage personnage, Degats degats) {
+		personnage.setPv(personnage.getPv() - degats.getDegats());
 	}
 
 }

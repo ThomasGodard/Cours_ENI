@@ -38,7 +38,7 @@ public abstract class Personnage {
 	}
 	
 	public void subitDegats(Degats degats) {
-		this.setPv(capaciteDefenses.subitDegat(this.getPv(), degats));;
+		capaciteDefenses.subitDegat(this, degats);
 	}
 	
 	public void saignement() {

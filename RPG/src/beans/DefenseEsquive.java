@@ -9,11 +9,9 @@ public class DefenseEsquive implements Defense {
 	private Random rand = new Random();
 	
 	@Override
-	public int subitDegat(int pv, Degats degats) {
+	public void subitDegat(Personnage personnage, Degats degats) {
 		if(rand.nextInt(100) <= CHANCE_ESQUIVE ) {
-			return pv - degats.getDegats();
-		} else {
-			return pv;
+			personnage.setPv(personnage.getPv() - degats.getDegats());
 		}
 	}
 }
