@@ -72,7 +72,8 @@ public class RPG {
 		int random = rand.nextInt(2);
 		
 		if(random == 0) {
-			switch (rand.nextInt(max)) {
+			random = rand.nextInt(max-1) + 1;
+			switch (random) {
 			case 1:
 				monstre.attaqueCible(personnages.get(1));
 				System.out.println("Monstre attaque " + personnages.get(1).getClass().getSimpleName());

@@ -6,6 +6,7 @@ public class Guerrier extends Personnage {
 	public Guerrier() {
 		super(PV_TOTAL);
 		this.capaciteAttaquesCibles = new AttaqueFort();
+		this.capaciteDefenses = new DefenseBouclier();
 	}
 
 	public void attaqueCibleDST(Personnage personnage) {

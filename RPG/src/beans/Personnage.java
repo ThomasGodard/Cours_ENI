@@ -12,7 +12,7 @@ import interfaces.SoinDeZone;
 public abstract class Personnage {
 	private int pv;
 	private int pvTotal;
-	private boolean saigne = false;
+	private boolean saigne;
 	
 	private static final double SAIGNEMENT = 0.95;
 	
@@ -27,7 +27,35 @@ public abstract class Personnage {
 	public Personnage(int pv) {
 		this.pvTotal = pv;
 		this.setPv(pv);
-		this.setSaigne(saigne);
+		this.setSaigne(false);
+	}
+
+	public int getPv() {
+		return pv;
+	}
+
+	protected void setPv(int pv) {
+		this.pv = pv;
+	}
+
+	public boolean estVivant() {
+		return this.getPv() > 0;
+	}
+	
+	public boolean getSaigne() {
+		return this.saigne;
+	}
+	
+	public void setSaigne(boolean saigne) {
+		this.saigne = saigne;
+	}
+	
+	public static double getSaignement() {
+		return SAIGNEMENT;
+	}
+	
+	public int getPvTotal() {
+		return pvTotal;
 	}
 	
 	public void attaqueCible(Personnage personnage) {
@@ -52,34 +80,6 @@ public abstract class Personnage {
 	
 	public void saignement() {
 		this.setPv((int) (this.getPv()*SAIGNEMENT));
-	}
-
-	public int getPv() {
-		return pv;
-	}
-
-	protected void setPv(int pv) {
-		this.pv = pv;
-	}
-
-	public boolean estVivant() {
-		return this.getPv() > 0;
-	}
-	
-	public boolean getSaigne() {
-		return this.saigne;
-	}
-	
-	public void setSaigne(boolean saigne) {
-		this.saigne = saigne;
-	}
-
-	public static double getSaignement() {
-		return SAIGNEMENT;
-	}
-
-	public int getPvTotal() {
-		return pvTotal;
 	}
 }
 

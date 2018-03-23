@@ -8,6 +8,9 @@ public class DefenseBouclier implements Defense {
 	
 	@Override
 	public void subitDegat(Personnage personnage, Degats degats) {
-		personnage.setPv((int) (personnage.getPv() - degats.getDegats()*REDUCTION_DEGAT));
+		int pv = personnage.getPv();
+		int degat = degats.getDegats();
+		personnage.setPv((int) (pv - degat*REDUCTION_DEGAT));
 	}
+	;
 }
