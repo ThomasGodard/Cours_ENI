@@ -24,12 +24,15 @@ public abstract class Attaque implements AttaqueCible, AttaqueDeZone{
 	public void attaque(Personnage perso, List<Personnage> personnages) {
 		if (perso instanceof Monstre) {
 			for (Personnage personnage : personnages) {
-				
+				if (!(personnage instanceof Monstre)) {
+					personnage.subitDegats(degats);
+				}
 			}
-		}
-		for (Personnage personnage : personnages) {
-			if (personnage instanceof Monstre) {
-				personnage.subitDegats(degats);
+		} else {
+			for (Personnage personnage : personnages) {
+				if (personnage instanceof Monstre) {
+					personnage.subitDegats(degats);
+				}
 			}
 		}
 	}

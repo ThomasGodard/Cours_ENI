@@ -69,21 +69,26 @@ public class RPG {
 	private static void monstreJoue(List<Personnage> personnages) {
 		Monstre monstre = (Monstre) personnages.get(0);
 		int max = personnages.size();
+		int random = rand.nextInt(2);
 		
-		if(rand.nextInt(2) == 0) {
+		if(random == 0) {
 			switch (rand.nextInt(max)) {
 			case 1:
 				monstre.attaqueCible(personnages.get(1));
+				System.out.println("Monstre attaque " + personnages.get(1).getClass().getSimpleName());
 				break;
 			case 2:
 				monstre.attaqueCible(personnages.get(2));
+				System.out.println("Monstre attaque " + personnages.get(2).getClass().getSimpleName());
 				break;
 			case 3:
 				monstre.attaqueCible(personnages.get(3));
+				System.out.println("Monstre attaque " + personnages.get(3).getClass().getSimpleName());
 				break;
 			}		
 		} else {
 			monstre.attaqueZone(personnages);
+			System.out.println("Monstre Attaque de zone.");
 		}
 	}
 	
