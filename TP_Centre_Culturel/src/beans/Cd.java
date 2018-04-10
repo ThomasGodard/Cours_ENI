@@ -1,13 +1,13 @@
 package beans;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Cd extends Produit {
 	
 	private int indexPiste = 0;
-	private List<Piste> pistes;
+	private Map<Integer, Piste> pistes;
 	
 	public Cd() {}
 	
@@ -17,7 +17,7 @@ public class Cd extends Produit {
 	}
 	
 	private void setPiste() {
-		this.pistes = new ArrayList<Piste>();
+		this.pistes = new HashMap<Integer, Piste>();
 	}
 
 	public int getIndexPiste() {
