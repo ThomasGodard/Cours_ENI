@@ -10,7 +10,7 @@ public interface ArticleDao {
 	
 	public List<Article> selectAll();
 	
-	public void update(Article article);
+	public int update(int idArticle, Article newArticle);
 	
 	public void insert(Article article);
 	
