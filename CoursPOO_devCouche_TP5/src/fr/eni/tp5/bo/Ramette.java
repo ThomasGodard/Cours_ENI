@@ -4,7 +4,7 @@ public class Ramette extends Article {
 
 	private int grammage;
 	
-	
+	public Ramette() { }
 	
 	public Ramette(int idArticle, String marque, String reference, String designation, float prixUnitaire, int qteStock,
 			int grammage) {
@@ -32,6 +32,7 @@ public class Ramette extends Article {
 		builder.append("Rammette [grammage=");
 		builder.append(this.grammage);
 		builder.append("]");
+		builder.append(System.lineSeparator());
 		return super.toString() + builder.toString();
 	}
 	

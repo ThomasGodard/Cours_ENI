@@ -9,6 +9,8 @@ public abstract class Article {
 	private float prixUnitaire;
 	private int qteStock;
 	
+	public Article() {	}
+	
 	public Article(int idArticle, String marque, String reference, String designation, float prixUnitaire,
 			int qteStock) {
 		this(marque, reference, designation, prixUnitaire, qteStock);
@@ -93,6 +95,7 @@ public abstract class Article {
 		builder.append(qteStock);
 		builder.append("]");
 		builder.append(System.lineSeparator());
+		builder.append("\t");
 		return builder.toString();
 	}
 

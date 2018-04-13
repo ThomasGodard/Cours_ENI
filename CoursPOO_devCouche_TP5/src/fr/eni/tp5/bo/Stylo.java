@@ -4,6 +4,8 @@ public class Stylo extends Article {
 
 	private String couleur;
 	
+	public Stylo() { }
+	
 	public Stylo(int idArticle, String marque, String reference, String designation, float prixUnitaire, int qteStock, String couleur) {
 		super(idArticle, marque, reference, designation, prixUnitaire, qteStock);
 		this.couleur = couleur;
@@ -28,6 +30,7 @@ public class Stylo extends Article {
 		builder.append("Stylo [couleur=");
 		builder.append(couleur);
 		builder.append("]");
+		builder.append(System.lineSeparator());
 		return super.toString() + builder.toString();
 	}
 }

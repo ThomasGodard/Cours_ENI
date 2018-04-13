@@ -14,5 +14,5 @@ public interface ArticleDao {
 	
 	public void insert(Article article);
 	
-	public void delete(Article article);
+	public void delete(int idArticle);
 }
