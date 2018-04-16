@@ -10,9 +10,13 @@ public interface ArticleDao {
 	
 	public List<Article> selectAll();
 	
-	public int update(int idArticle, Article newArticle);
+	public int update(Article newArticle);
 	
-	public void insert(Article article);
+	/**
+	 * 
+	 * @param article obligatoirement non null
+	 */
+	public void insert(Article article) ;
 	
-	public void delete(int idArticle);
+	public boolean delete(Article article);
 }
