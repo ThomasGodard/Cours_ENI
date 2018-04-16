@@ -1,7 +1,13 @@
 package fr.eni.tp5.bo;
 
-public abstract class Article {
+import java.io.Serializable;
 
+public abstract class Article implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Integer idArticle;
 	private String reference;
 	private String marque;
