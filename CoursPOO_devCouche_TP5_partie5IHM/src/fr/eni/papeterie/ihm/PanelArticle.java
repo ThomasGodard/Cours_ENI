@@ -13,7 +13,6 @@ import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
 public class PanelArticle extends JPanel{
-
 	
 	private JLabel lblRef;
 	private JTextField txtRef;
@@ -99,7 +98,7 @@ public class PanelArticle extends JPanel{
 
 	private JLabel getLblRef() {
 		if ( lblRef == null ) {
-			lblRef = new JLabel("Référence");
+			lblRef = new JLabel("Rï¿½fï¿½rence");
 		}
 		return lblRef;
 	}
@@ -113,7 +112,7 @@ public class PanelArticle extends JPanel{
 
 	private JLabel getLblDes() {
 		if ( lblDes == null ) {
-			lblDes = new JLabel("Désignation");
+			lblDes = new JLabel("Dï¿½signation");
 		}
 		return lblDes;
 	}
@@ -191,7 +190,7 @@ public class PanelArticle extends JPanel{
 
 	private JRadioButton getRbRamette() {
 		if ( rbRamette == null) {
-			rbRamette = new JRadioButton("Ramette");
+			rbRamette = new JRadioButton("Ramette", true);
 			rbRamette.addActionListener((e) -> {
 				if(isEnabled()) {
 					getCbGram80().setEnabled(true);
@@ -241,7 +240,7 @@ public class PanelArticle extends JPanel{
 
 	private JCheckBox getCbGram80() {
 		if ( cbGram80 == null ) {
-			cbGram80 = new JCheckBox("80 grammes");
+			cbGram80 = new JCheckBox("80 grammes", true);
 		}
 		return cbGram80;
 	}
@@ -265,6 +264,7 @@ public class PanelArticle extends JPanel{
 			String couleurs[] = {"jaune", "bleu", "vert", "rouge", "noir", "violet", "rose"};
 			
 			cmboCouleur = new JComboBox<String>(couleurs);
+			cmboCouleur.setEnabled(false);
 		}
 		return cmboCouleur;
 	}

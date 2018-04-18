@@ -17,8 +17,8 @@ public class FenetreArticle extends JFrame {
 	
 	public FenetreArticle() {
 		setLocationRelativeTo(null);
-		setSize(300, 300);
-		//setResizable(false);
+		setSize(335, 315);
+		setResizable(false);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setContentPane(getCp());
 		setVisible(true);
@@ -43,10 +43,11 @@ public class FenetreArticle extends JFrame {
 	
 	private Component getVueBtn() {
 		if ( panelBtn == null ) {
-			panelBtn = new JPanel();
-			panelBtn.setBackground(Color.blue);
+			panelBtn = new PanelBouttons();
 		}
 		return panelBtn;
 	}
+	
+	
 }
 

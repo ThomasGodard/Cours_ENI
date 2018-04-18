@@ -1,9 +1,6 @@
 package fr.eni.papeterie.test;
 
-import java.util.List;
-
 import fr.eni.papeterie.bo.Article;
-import fr.eni.papeterie.bo.Stylo;
 import fr.eni.papeterie.dal.ArticleDAO;
 import fr.eni.papeterie.dal.DAOFactory;
 
@@ -23,7 +20,7 @@ public class AppliTestDAO {
 			/*Article articleAInserer = new Stylo("waterman", "w1", "le plus beau style", 150.0f, 2, "bleu");
 			articleDAO.insert(articleAInserer);*/
 			
-			System.out.println("Liste après insertion:");
+			System.out.println("Liste aprï¿½s insertion:");
 			for(Article a:articleDAO.selectAll())
 			{
 				System.out.println(a);
@@ -33,7 +30,7 @@ public class AppliTestDAO {
 			articleId1.setQteStock(100);
 			articleDAO.update(articleId1);
 			
-			System.out.println("Liste après modification:");
+			System.out.println("Liste aprï¿½s modification:");
 			for(Article a:articleDAO.selectAll())
 			{
 				System.out.println(a);
@@ -43,7 +40,7 @@ public class AppliTestDAO {
 				boolean deleteOK = articleDAO.delete(articleDAO.selectById(4));
 				if(deleteOK)
 				{
-					System.out.println("Suppression réussie");
+					System.out.println("Suppression rï¿½ussie");
 				}
 				else
 				{
@@ -55,7 +52,7 @@ public class AppliTestDAO {
 				System.out.println(e.getMessage());
 			}
 	
-			System.out.println("Liste après suppression:");
+			System.out.println("Liste aprï¿½s suppression:");
 			for(Article a:articleDAO.selectAll())
 			{
 				System.out.println(a);
