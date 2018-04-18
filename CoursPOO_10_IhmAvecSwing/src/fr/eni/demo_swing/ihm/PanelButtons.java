@@ -3,6 +3,7 @@ package fr.eni.demo_swing.ihm;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.InputMethodListener;
 import java.util.ArrayList;
 
 import javax.swing.BoxLayout;

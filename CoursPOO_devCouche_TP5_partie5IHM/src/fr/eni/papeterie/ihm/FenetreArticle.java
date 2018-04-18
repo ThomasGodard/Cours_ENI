@@ -13,7 +13,6 @@ public class FenetreArticle extends JFrame {
 	private JPanel cp;
 	private JPanel panelArt;
 	private JPanel panelBtn;
-	JButton bouton;
 
 	
 	public FenetreArticle() {
@@ -34,20 +33,20 @@ public class FenetreArticle extends JFrame {
 		return cp;
 	}
 	
+	public JPanel getVueArt() {
+		if ( panelArt == null ) {
+			panelArt = new PanelArticle();
+
+		}
+		return panelArt;
+	}
+	
 	private Component getVueBtn() {
 		if ( panelBtn == null ) {
 			panelBtn = new JPanel();
 			panelBtn.setBackground(Color.blue);
 		}
 		return panelBtn;
-	}
-
-	public JPanel getVueArt() {
-		if ( panelArt == null ) {
-			panelArt = new PanelArticle();
-			panelArt.setBackground(Color.PINK);
-		}
-		return panelArt;
 	}
 }
 

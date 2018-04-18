@@ -13,12 +13,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
 public class PanelArticle extends JPanel{
-	
-	public interface PanelArticleListener {
-		public void onClick();
-	}
 
-	private PanelArticleListener aListener;
 	
 	private JLabel lblRef;
 	private JTextField txtRef;
