@@ -17,9 +17,13 @@ public class Fenetre extends JFrame implements PanelBouttonsListener {
 	private PanelButtons panelButtonsChiffres;
 	private PanelButtons panelButtonsActions;
 	
+	private String affichage;
+	private String resultat = "";
+	private String operateur = "";
+	private String boutonClicked;
 	
 	private JPanel getPanelGlobal() {
-		if ( this.panelGlobal == null) {
+		if ( this.panelGlobal == null ) {
 			panelGlobal = new JPanel(new BorderLayout());
 			panelGlobal.add(getLblResult(), BorderLayout.NORTH);
 			panelGlobal.add(getPanelButtonsChiffres(), BorderLayout.CENTER);
@@ -32,6 +36,7 @@ public class Fenetre extends JFrame implements PanelBouttonsListener {
 	private JLabel getLblResult() {
 		if ( lblResult == null ) {
 			lblResult = new JLabel("resultat", SwingConstants.RIGHT);
+			lblResult.setSize(50, 30);
 		}
 		return lblResult;
 	}
@@ -66,7 +71,48 @@ public class Fenetre extends JFrame implements PanelBouttonsListener {
 
 
 	@Override
-	public void onButonClicked(String msg) {
-		System.out.println(msg);
+	public void onButonClicked(String boutonCliked) {
+		this.boutonClicked = boutonCliked;
+		affichage();
 	}
+	
+	private void affichage() {
+		calculette();
+		getLblResult().setText(boutonClicked);
+	}
+	
+	private void calculette() {
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
