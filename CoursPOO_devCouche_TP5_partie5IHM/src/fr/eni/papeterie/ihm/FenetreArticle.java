@@ -1,19 +1,25 @@
 package fr.eni.papeterie.ihm;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Component;
+import java.util.List;
+import java.util.ListIterator;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class FenetreArticle extends JFrame {
+import fr.eni.papeterie.bll.BLLException;
+import fr.eni.papeterie.bll.CatalogueManager;
+import fr.eni.papeterie.bo.Article;
+import fr.eni.papeterie.ihm.PanelBouttons.PanelBouttonsListener;
 
+public class FenetreArticle extends JFrame implements PanelBouttonsListener {
+
+	PanelBouttonsListener btnListener;
+	
 	private JPanel cp;
 	private JPanel panelArt;
 	private JPanel panelBtn;
-
 	
 	public FenetreArticle() {
 		setLocationRelativeTo(null);
@@ -35,7 +41,7 @@ public class FenetreArticle extends JFrame {
 	
 	public JPanel getVueArt() {
 		if ( panelArt == null ) {
-			panelArt = new PanelArticle();
+			panelArt = new PanelArticle(this);
 
 		}
 		return panelArt;
@@ -43,11 +49,24 @@ public class FenetreArticle extends JFrame {
 	
 	private Component getVueBtn() {
 		if ( panelBtn == null ) {
-			panelBtn = new PanelBouttons();
+			panelBtn = new PanelBouttons(this);
 		}
 		return panelBtn;
 	}
+
+	@Override
+	public void onClic(int noBtn) {
+		switch (noBtn) {
+		case 1:
+			previous();
+			System.out.println(((PanelArticle) panelArt).getTxtRef().getText());
+			break;
+
+		default:
+			break;
+		};
+	}
 	
-	
+	public void save();
 }
 
